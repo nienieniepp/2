@@ -1,0 +1,7 @@
+<h2>Dashboard</h2>
+{% for f in figures %}
+<div style="margin: 12px 0;">
+  <p>{{f}}</p>
+  <img src="/outputs/figures/{{f}}" width="800"/>
+</div>
+{% endfor %}

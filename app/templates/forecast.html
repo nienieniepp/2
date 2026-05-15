@@ -1,0 +1,12 @@
+<h2>LSTM Forecast</h2>
+<div><img src="/outputs/figures/lstm_forecast.png" width="800"/></div>
+<h3>Future 4-week Forecast</h3>
+<table border="1" cellpadding="6">
+<tr><th>week_ahead</th><th>forecast_sentiment</th></tr>
+{% for r in forecast %}<tr><td>{{r.week_ahead}}</td><td>{{r.forecast_sentiment}}</td></tr>{% endfor %}
+</table>
+<h3>Baseline vs LSTM</h3>
+<table border="1" cellpadding="6">
+<tr><th>model</th><th>rmse</th><th>mae</th></tr>
+{% for r in comparison %}<tr><td>{{r.model}}</td><td>{{r.rmse}}</td><td>{{r.mae}}</td></tr>{% endfor %}
+</table>

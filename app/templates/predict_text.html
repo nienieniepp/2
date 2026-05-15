@@ -1,0 +1,14 @@
+<h2>Sentiment Text Prediction</h2>
+<form method="post">
+  <textarea name="text" rows="6" cols="80" placeholder="输入一段商品评论..."></textarea><br/>
+  <button type="submit">预测</button>
+</form>
+{% if msg %}<p style="color:#b00020;">{{ msg }}</p>{% endif %}
+{% if result %}
+<p><b>预测标签：</b>{{ result.label }}</p>
+<ul>
+  <li>negative: {{ '%.4f'|format(result.probs[0]) }}</li>
+  <li>neutral: {{ '%.4f'|format(result.probs[1]) }}</li>
+  <li>positive: {{ '%.4f'|format(result.probs[2]) }}</li>
+</ul>
+{% endif %}
