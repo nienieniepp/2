@@ -1,0 +1,9 @@
+project_name: sentiment-trend-forecasting
+random_seed: 42
+paths:
+  raw_data: data/raw/Reviews.csv
+  cleaned_data: data/processed/cleaned_reviews.csv
+  sentiment_model_dir: models/sentiment_model
+  lstm_model: models/lstm_forecaster.pt
+  sentiment_scores: outputs/predictions/review_sentiment_scores.csv
+  weekly_timeseries: outputs/timeseries/weekly_sentiment.csv

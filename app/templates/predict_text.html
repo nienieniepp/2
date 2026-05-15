@@ -1,0 +1,1 @@
+<h2>Sentiment Predict</h2><form method="post"><textarea name="text" rows="5" cols="60"></textarea><br><button type="submit">Predict</button></form>{% if msg %}<p>{{msg}}</p>{% endif %}{% if result %}<p>Label: {{result.label}}</p><p>negative={{result.probs[0]}}, neutral={{result.probs[1]}}, positive={{result.probs[2]}}</p>{% endif %}

@@ -1,0 +1,1 @@
+<h2>Dashboard</h2>{% for f in ["sentiment_distribution.png","weekly_sentiment_trend.png","confusion_matrix.png","model_comparison.png"] %}<div><img src="{{ url_for('static', filename='figures/'+f) }}" width="700"></div>{% endfor %}
